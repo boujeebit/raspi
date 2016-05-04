@@ -1,0 +1,12 @@
+#Change timezone if needed
+
+mkdir ~/startup
+mkdir ~/logs
+
+# Place scripts in startup folder
+
+sudo crontab -e
+
+#Add the job
+
+@reboot sh /home/pi/startup/launcher.sh >/home/pi/logs/cronlog 2>&1
